@@ -1,0 +1,13 @@
+name: "R1 rerun-after-fix"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger-r1.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    uses: naylorb/sb-lib/.github/workflows/rw-fixme.yml@main
