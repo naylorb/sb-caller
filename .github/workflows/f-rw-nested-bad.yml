@@ -1,0 +1,13 @@
+name: "F rw-nested-bad"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    uses: naylorb/sb-lib/.github/workflows/rw-nested-bad.yml@f3367e35b6dff47dc5c72d12af95300163c029aa

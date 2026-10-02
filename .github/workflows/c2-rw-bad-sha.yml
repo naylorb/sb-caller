@@ -1,0 +1,13 @@
+name: "C2 rw-bad-sha"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    uses: naylorb/sb-lib/.github/workflows/rw-bad.yml@f3367e35b6dff47dc5c72d12af95300163c029aa

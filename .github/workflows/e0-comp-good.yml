@@ -1,0 +1,15 @@
+name: "E0 comp-good"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: naylorb/sb-lib/actions/comp-good@f3367e35b6dff47dc5c72d12af95300163c029aa

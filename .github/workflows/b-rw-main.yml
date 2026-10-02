@@ -1,0 +1,13 @@
+name: "B rw-main"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    uses: naylorb/sb-lib/.github/workflows/rw-good.yml@main

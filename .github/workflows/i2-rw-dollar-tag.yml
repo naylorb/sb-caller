@@ -1,0 +1,13 @@
+name: "I2 rw-dollar-tag"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    uses: naylorb/sb-lib/.github/workflows/rw-dollar.yml@v1

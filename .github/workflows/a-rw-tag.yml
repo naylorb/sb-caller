@@ -1,0 +1,13 @@
+name: "A rw-tag"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - trigger.txt
+permissions:
+  contents: read
+jobs:
+  case:
+    uses: naylorb/sb-lib/.github/workflows/rw-good.yml@v1

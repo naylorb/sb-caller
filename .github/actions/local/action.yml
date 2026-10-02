@@ -1,0 +1,10 @@
+name: local
+description: Local composite whose nested ref is pinned by SHA
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: echo "local start"
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        path: nested-local
