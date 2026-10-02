@@ -1,0 +1,6 @@
+name: q4-local-bad
+description: local composite with an unpinned step inside
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
